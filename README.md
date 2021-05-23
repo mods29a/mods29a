@@ -18,6 +18,9 @@ I've just started, so please be patient about my codes.
 
 My first published post is about calculating CRC32 of data in VB6 with ASSEMBLY code... Hmmmm.. ASM + VB6 = SUPER!
 
+* Second project: AES (AES Rijndael Block Cipher) Class written completely in VB6 with no dependencies.
+* See 'cAES.cls' file.
+
 
 I'll try to be active. However, I have too much day-to-day obligations. So, I *might* be kinda slow, if you know what I mean.
 
