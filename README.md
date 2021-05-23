@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @mods29a
+- 👋 Hi, I’m Z-AbouShady (call me that 😉)
 - 👀 I’m interested in Visual Basic 6, Assembly x86, and C#
 - 🌱 I’m currently learning Hacking with Kali
 - 💞️ I’m looking to collaborate on Kali
