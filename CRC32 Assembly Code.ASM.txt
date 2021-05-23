@@ -1,0 +1,39 @@
+; -------------------------------------------------------------------------
+;   Input:
+;           ESI = Ptr Data
+;           EDI = Size of Data
+;   Output:
+;           EAX = crc32 of data
+; -------------------------------------------------------------------------
+get_CRC32:
+        cld
+        xor     ecx,ecx
+        dec     ecx
+        mov     edx,ecx
+ NextByteCRC:
+        xor     eax,eax
+        xor     ebx,ebx
+        lodsb
+        xor     al,cl
+        mov     cl,ch
+        mov     ch,dl
+        mov     dl,dh
+        mov     dh,8
+ NextBitCRC:
+        shr     bx,1
+        rcr     ax,1
+        jnc     NoCRC
+        xor     ax,08320h
+        xor     bx,0EDB8h
+ NoCRC: dec     dh
+        jnz     NextBitCRC
+        xor     ecx,eax
+        xor     edx,ebx
+        dec     edi
+        jnz     NextByteCRC
+        not     edx
+        not     ecx
+        mov     eax,edx
+        rol     eax,16
+        mov     ax,cx
+        ret
